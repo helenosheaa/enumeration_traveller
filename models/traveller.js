@@ -42,9 +42,7 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-// map then filter
-// for each loop into array, check if it includes it already
+  return Array.from(new Set( this.getModesOfTransport()))
 };
-
 
 module.exports = Traveller;
