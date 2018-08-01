@@ -3,27 +3,15 @@ const Traveller = function(journeys) {
 };
 
 Traveller.prototype.getJourneyStartLocations = function() {
-  const startLocations = [];
-    this.journeys.forEach((journey) => {
-      startLocations.push(journey.startLocation);
-    });
-    return startLocations;
+  return this.journeys.map(journey => journey.startLocation);
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-  const endLocations = [];
-    this.journeys.forEach((journey) => {
-      endLocations.push(journey.endLocation);
-    });
-    return endLocations;
+    return this.journeys.map(journey => journey.endLocation);
 };
 
 Traveller.prototype.getModesOfTransport = function () {
-  const modesOfTransport = [];
-    this.journeys.forEach((journey) => {
-      modesOfTransport.push(journey.transport);
-    });
-    return modesOfTransport;
+  return this.journeys.map(journey => journey.transport);
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
