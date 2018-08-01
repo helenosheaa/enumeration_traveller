@@ -11,7 +11,11 @@ Traveller.prototype.getJourneyStartLocations = function() {
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-
+  const endLocations = [];
+    this.journeys.forEach((journey) => {
+      endLocations.push(journey.endLocation);
+    });
+    return endLocations;
 };
 
 Traveller.prototype.getModesOfTransport = function () {
