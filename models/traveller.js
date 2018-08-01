@@ -19,7 +19,11 @@ Traveller.prototype.getJourneyEndLocations = function () {
 };
 
 Traveller.prototype.getModesOfTransport = function () {
-
+  const modesOfTransport = [];
+    this.journeys.forEach((journey) => {
+      modesOfTransport.push(journey.transport);
+    });
+    return modesOfTransport;
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
