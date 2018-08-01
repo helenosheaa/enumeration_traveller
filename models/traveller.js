@@ -32,7 +32,8 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
+  const journeysByMinDistance = this.journeys.filter((journey) => journey.distance > minDistance);
+  return journeysByMinDistance;
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
@@ -40,7 +41,8 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
+// map then filter
+// for each loop into array, check if it includes it already
 };
 
 
